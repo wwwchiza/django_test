@@ -1,0 +1,7 @@
+venv
+.idea
+/media/
+/shop/migrations/
+/db.sqlite3
+/data.json
+/rest_shop/migrations/

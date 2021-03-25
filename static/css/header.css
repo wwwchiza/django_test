@@ -1,0 +1,94 @@
+body{
+background-image: url(../image/italian_flag.jpg);
+}
+
+header {
+top: 0;
+left: 0;
+display: flex;
+position: fixed;
+justify-content: space-around;
+width: 100%;
+height: 70px;
+background-color: rgba(61,36,36,0.7);
+}
+.logo{
+    line-height: 25px;
+    margin-top: 10px;
+    }
+.dropdown{
+top:15px;
+}
+.menu{
+margin-top:25px;
+color:white;
+font-family:arial;
+font-weight:550;
+padding-left:150px;
+}
+.booking{
+margin-top:25px;
+color:white;
+font-family:arial;
+font-weight:550;
+padding-left:150px;
+}
+.contact{
+margin-top:25px;
+color:white;
+font-family:arial;
+font-weight:550;
+padding-left:150px;
+}
+.gallery{
+margin-top:25px;
+color:white;
+font-family:arial;
+font-weight:550;
+padding-left:150px;
+}
+.milan{
+color: green;
+font-weight:900;
+font-size:40px;
+width:0;
+height:0;
+}
+.milan a{
+text-decoration:none;
+color: green;
+}
+.italian{
+font-size:15px;
+color: white;
+height:100px;
+}
+.Restaurant{
+font-size:15px;
+color: red;
+}
+.icon{
+margin-top:20px;
+filter: invert(48%) sepia(13%) saturate(3207%) hue-rotate(330deg) brightness(100%) contrast(80%);
+position: relative;
+}
+.card-img {
+weight:20px;
+height:100px;
+}
+
+.cart {
+margin-top:20px;
+}
+
+.dishes{
+margin-top:90px;
+margin-left:15px;
+}
+.dish{
+color: red;
+font-family:calibri;
+font-size:10px;
+}
+
+

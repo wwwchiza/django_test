@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+сумма:{{ cart_total }}<br>
+количсетво:{{ cart_records.count }}<br>
+товары:<br>
+{% for item in cart_records %}
+    название:{{ item.product.title }}<br>
+    кол:{{ item.qty }}<br>
+{% endfor %}
+</body>
+</html>

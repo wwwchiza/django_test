@@ -1,0 +1,17 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/login.css'%} ">
+    <section class="login">
+        <form method="post">
+            <h3>{{ auth_header }}</h3>
+            {% csrf_token %}
+            {{ form }}
+            <button type="submit">{{ submit_text }}</button>
+            {{ user }}
+             <a class="btn btn-primary" href="{% url 'social:begin' 'google-oauth2' %}">
+                Login
+              </a>
+        </form>
+    </section>
+{% endblock %}

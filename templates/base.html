@@ -1,0 +1,32 @@
+{% extends 'index.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/header.css' %}">
+
+{% block content %}
+    {% include 'header.html' %}
+    <div class="row justify-content-sm-start mx-0 ">
+        {% for dish in dishes %}
+            <div class="card offset-1 col-3 mt-4 p-2" id="dish-{{ dish.id }}">
+                <img class="card-img w-100 h-100 bg-warning" src="{{ MEDIA_URL }}{{ dish.image }}" alt="картинки нет">
+                <div class="card-body">
+                    <h5 class="card-title">{{ dish.title }}</h5>
+                    <p class="card-text">{{ dish.description }}</p>
+                    <a href="#" class="btn btn-primary">Перейти к блюду</a>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">коспания: {{ dish.company }}</li>
+                    <li class="list-group-item">цена: {{ dish.price }}</li>
+                    <li class="list-group-item">категории: {{ dish.get_categories }}</li>
+                </ul>
+                <form action="/cart/" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="dish_id" value="{{ dish.id }}">
+                    <label>
+                        <input type="number" name="qty" value="{{ dish.id }}">
+                    </label>
+                    <button type="submit">Добавить в корзину</button>
+                </form>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
